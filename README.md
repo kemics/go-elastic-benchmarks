@@ -21,7 +21,7 @@ BenchmarkCatIndicesOfficialNaive-12                        10000            7060
 BenchmarkCatIndicesOfficialFastHTTP-12                     10000            592768 ns/op            1601 B/op         22 allocs/op
 ```
 
-### Perform cat indices requests
+### Perform match all requests
 
 `go test -bench=BenchmarkMatchAll -benchtime=10000x -timeout=100m`
 
