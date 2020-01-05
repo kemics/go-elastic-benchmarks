@@ -8,11 +8,9 @@ import (
 	"github.com/olivere/elastic/v7"
 )
 
-func BenchmarkCatIndicesElasticOlivereJSONIterator(b *testing.B) {
-
+func BenchmarkCatIndicesElasticOlivereNaive(b *testing.B) {
 	client, err := elastic.NewClient(
 		elastic.SetSniff(false),
-		elastic.SetDecoder(&JSONIteratorDecoder{}),
 	)
 	if err != nil {
 		b.Fatalf("Can't connect to elasticsearch, error: %v", err)
@@ -29,9 +27,11 @@ func BenchmarkCatIndicesElasticOlivereJSONIterator(b *testing.B) {
 	}
 }
 
-func BenchmarkCatIndicesElasticOlivereNaive(b *testing.B) {
+func BenchmarkCatIndicesElasticOlivereJSONIterator(b *testing.B) {
+
 	client, err := elastic.NewClient(
 		elastic.SetSniff(false),
+		elastic.SetDecoder(&JSONIteratorDecoder{}),
 	)
 	if err != nil {
 		b.Fatalf("Can't connect to elasticsearch, error: %v", err)
@@ -68,11 +68,9 @@ func BenchmarkCatIndicesElasticOlivereFastHTTP(b *testing.B) {
 	}
 }
 
-func BenchmarkMatchAllElasticOlivereJSONIterator(b *testing.B) {
-
+func BenchmarkMatchAllElasticOlivereNaive(b *testing.B) {
 	client, err := elastic.NewClient(
 		elastic.SetSniff(false),
-		elastic.SetDecoder(&JSONIteratorDecoder{}),
 	)
 	if err != nil {
 		b.Fatalf("Can't connect to elasticsearch, error: %v", err)
@@ -89,9 +87,11 @@ func BenchmarkMatchAllElasticOlivereJSONIterator(b *testing.B) {
 	}
 }
 
-func BenchmarkMatchAllElasticOlivereNaive(b *testing.B) {
+func BenchmarkMatchAllElasticOlivereJSONIterator(b *testing.B) {
+
 	client, err := elastic.NewClient(
 		elastic.SetSniff(false),
+		elastic.SetDecoder(&JSONIteratorDecoder{}),
 	)
 	if err != nil {
 		b.Fatalf("Can't connect to elasticsearch, error: %v", err)

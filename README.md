@@ -9,8 +9,8 @@
 #### [Elastic Olivere](https://github.com/olivere/elastic)
 
 ```
-BenchmarkCatIndicesElasticOlivereJSONIterator-12           10000            810098 ns/op           52544 B/op         77 allocs/op
 BenchmarkCatIndicesElasticOlivereNaive-12                  10000            708428 ns/op           52694 B/op         79 allocs/op
+BenchmarkCatIndicesElasticOlivereJSONIterator-12           10000            810098 ns/op           52544 B/op         77 allocs/op
 BenchmarkCatIndicesElasticOlivereFastHTTP-12               10000            626468 ns/op            5692 B/op         51 allocs/op
 ```
 
@@ -28,8 +28,8 @@ BenchmarkCatIndicesOfficialFastHTTP-12                     10000            5927
 #### [Elastic Olivere](https://github.com/olivere/elastic)
 
 ```
-BenchmarkMatchAllElasticOlivereJSONIterator-12             10000            680579 ns/op           54703 B/op        116 allocs/op
 BenchmarkMatchAllElasticOlivereNaive-12                    10000            684675 ns/op           55006 B/op        120 allocs/op
+BenchmarkMatchAllElasticOlivereJSONIterator-12             10000            680579 ns/op           54703 B/op        116 allocs/op
 BenchmarkMatchAllElasticOlivereFastHTTP-12                 10000            561623 ns/op            8040 B/op         88 allocs/op
 ```
 
@@ -37,8 +37,8 @@ BenchmarkMatchAllElasticOlivereFastHTTP-12                 10000            5616
 
 ```
 BenchmarkMatchAllOfficialNaive-12                          10000            654073 ns/op           52089 B/op         92 allocs/op
-BenchmarkMatchAllOfficialFastHTTP-12                       10000            550271 ns/op            5137 B/op         61 allocs/op
 BenchmarkMatchAllOfficialJSONIterator-12                   10000            653290 ns/op           51986 B/op         99 allocs/op
+BenchmarkMatchAllOfficialFastHTTP-12                       10000            550271 ns/op            5137 B/op         61 allocs/op
 ```
 
 ## Reproduce
