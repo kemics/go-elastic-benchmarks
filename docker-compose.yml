@@ -1,0 +1,13 @@
+version: '3'
+services:
+  elasticsearch:
+    container_name: elasticsearch751
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.1
+    command:
+    - elasticsearch
+    - -Expack.security.enabled=false
+    - -Ediscovery.type=single-node
+    - -Enetwork.host=_local_,_site_
+    - -Enetwork.publish_host=_local_
+    ports:
+    - 9200:9200
