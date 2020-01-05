@@ -1,4 +1,4 @@
-# ElasticSearch clients benchmarks
+# ElasticSearch Go benchmarks
 
 ## Results
 
